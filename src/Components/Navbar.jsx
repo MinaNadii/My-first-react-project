@@ -72,7 +72,7 @@ const Navbar = () => {
 
           <div className="sticky h-full top-0 h-screen bg-white w-full">
             <Avatar />
-            <NavUl />
+            <NavUl  handleClicked={closeNav}/>
           </div>
         </aside>
       </div>

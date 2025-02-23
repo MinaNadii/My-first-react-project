@@ -24,7 +24,7 @@ const NavLinks = [
   },
 ];
 
-const NavUl = () => {
+const NavUl = ({ handleClicked }) => {
   const location = useLocation(); // Get current path
   const [activeLink, setActiveLink] = useState(location.pathname);
 
@@ -35,7 +35,10 @@ const NavUl = () => {
           <li key={index} className="py-1">
             <Link
               to={link.href}
-              onClick={() => setActiveLink(link.href)}
+              onClick={() => {
+                setActiveLink(link.href);
+                handleClicked() ? handleClicked() : null;
+              }}
               className={`relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:w-0 after:h-[1px] after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full tracking-wider font-medium text-black/60 transition ${
                 location.pathname === link.href ? "font-bold text-blue-400" : ""
               }`}
