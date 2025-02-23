@@ -1,6 +1,6 @@
 import React from "react";
 import SectionsHeader from "../Components/SectionsHeader/SectionsHeader";
-import Progress from "../Components/ExperienceProgressBar/Progress";
+import Progress from "../Components/SkillsProgressBar/Progress";
 
 const progressData = [
   {
